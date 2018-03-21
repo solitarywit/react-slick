@@ -239,14 +239,14 @@ export var InnerSlider = createReactClass({
     
     return (
       <div {...innerSliderProps} >
-        { !this.props.unslick ? prevArrow : '' }
+        <div>{ !this.props.unslick ? prevArrow : '' }</div>
         <div ref={this.listRefHandler} {...listProps} >
           <Track ref={this.trackRefHandler} {...trackProps}>
             {this.props.children}
           </Track>
         </div>
-        { !this.props.unslick ? nextArrow: '' }
-        { !this.props.unslick ? dots : '' }
+        <div>{ !this.props.unslick ? nextArrow: '' }</div>
+        <div>{ !this.props.unslick ? dots : '' }</div>
       </div>
     );
   }
