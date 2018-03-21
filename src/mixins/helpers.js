@@ -68,7 +68,7 @@ var helpers = {
       var selector = '[data-index="' + this.state.currentSlide +'"]';
       if (this.list) {
         var slickList = ReactDOM.findDOMNode(this.list);
-        var elem = slickList.querySelector(selector) || {};
+        var elem = slickList.querySelector(selector) || slickList.querySelector('[data-index]') || {};
         slickList.style.height = (elem.offsetHeight || 0) + 'px';
       }
     }
